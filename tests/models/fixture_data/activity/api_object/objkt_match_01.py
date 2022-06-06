@@ -3,18 +3,18 @@ from uuid import UUID
 
 from pytz import UTC
 
-from rarible_marketplace_indexer.models import ActivityTypeEnum
-from rarible_marketplace_indexer.models import PlatformEnum
-from rarible_marketplace_indexer.types.rarible_api_objects.activity.order.activity import RaribleApiOrderMatchActivity
-from rarible_marketplace_indexer.types.rarible_api_objects.asset.asset import TokenAsset
-from rarible_marketplace_indexer.types.rarible_api_objects.asset.asset import XtzAsset
-from rarible_marketplace_indexer.types.rarible_api_objects.asset.asset_type import MultiTokenAssetType
-from rarible_marketplace_indexer.types.rarible_api_objects.asset.asset_type import XtzAssetType
-from rarible_marketplace_indexer.types.tezos_objects.asset_value.asset_value import AssetValue
-from rarible_marketplace_indexer.types.tezos_objects.asset_value.xtz_value import Xtz
-from rarible_marketplace_indexer.types.tezos_objects.tezos_object_hash import ImplicitAccountAddress
-from rarible_marketplace_indexer.types.tezos_objects.tezos_object_hash import OperationHash
-from rarible_marketplace_indexer.types.tezos_objects.tezos_object_hash import OriginatedAccountAddress
+from marketplaces_indexer.models import ActivityTypeEnum
+from marketplaces_indexer.models import PlatformEnum
+from marketplaces_indexer.types.rarible_api_objects.activity.order.activity import RaribleApiOrderMatchActivity
+from marketplaces_indexer.types.rarible_api_objects.asset.asset import TokenAsset
+from marketplaces_indexer.types.rarible_api_objects.asset.asset import XtzAsset
+from marketplaces_indexer.types.rarible_api_objects.asset.asset_type import MultiTokenAssetType
+from marketplaces_indexer.types.rarible_api_objects.asset.asset_type import XtzAssetType
+from marketplaces_indexer.types.tezos_objects.asset_value.asset_value import AssetValue
+from marketplaces_indexer.types.tezos_objects.asset_value.xtz_value import Xtz
+from marketplaces_indexer.types.tezos_objects.tezos_object_hash import ImplicitAccountAddress
+from marketplaces_indexer.types.tezos_objects.tezos_object_hash import OperationHash
+from marketplaces_indexer.types.tezos_objects.tezos_object_hash import OriginatedAccountAddress
 
 activity_api_object = RaribleApiOrderMatchActivity(
     id=UUID('45b51339-c32e-56ab-a44f-66463b7d4fad'),

@@ -15,10 +15,10 @@ from _pytest.fixtures import SubRequest
 from pydantic import BaseModel
 from tortoise.models import Model
 
-from rarible_marketplace_indexer.models import ActivityModel
-from rarible_marketplace_indexer.models import OrderModel
-from rarible_marketplace_indexer.types.rarible_api_objects.activity.order.activity import RaribleApiOrderActivity
-from rarible_marketplace_indexer.types.rarible_api_objects.order.order import RaribleApiOrder
+from marketplaces_indexer.models import ActivityModel
+from marketplaces_indexer.models import OrderModel
+from marketplaces_indexer.types.rarible_api_objects.activity.order.activity import RaribleApiOrderActivity
+from marketplaces_indexer.types.rarible_api_objects.order.order import RaribleApiOrder
 
 
 class TestingSubject:

@@ -3,14 +3,14 @@ from uuid import UUID
 
 from pytz import UTC
 
-from rarible_marketplace_indexer.models import ActivityModel
-from rarible_marketplace_indexer.models import ActivityTypeEnum
-from rarible_marketplace_indexer.models import PlatformEnum
-from rarible_marketplace_indexer.types.rarible_api_objects.asset.enum import AssetClassEnum
-from rarible_marketplace_indexer.types.tezos_objects.asset_value.xtz_value import Xtz
-from rarible_marketplace_indexer.types.tezos_objects.tezos_object_hash import ImplicitAccountAddress
-from rarible_marketplace_indexer.types.tezos_objects.tezos_object_hash import OperationHash
-from rarible_marketplace_indexer.types.tezos_objects.tezos_object_hash import OriginatedAccountAddress
+from marketplaces_indexer.models import ActivityModel
+from marketplaces_indexer.models import ActivityTypeEnum
+from marketplaces_indexer.models import PlatformEnum
+from marketplaces_indexer.types.rarible_api_objects.asset.enum import AssetClassEnum
+from marketplaces_indexer.types.tezos_objects.asset_value.xtz_value import Xtz
+from marketplaces_indexer.types.tezos_objects.tezos_object_hash import ImplicitAccountAddress
+from marketplaces_indexer.types.tezos_objects.tezos_object_hash import OperationHash
+from marketplaces_indexer.types.tezos_objects.tezos_object_hash import OriginatedAccountAddress
 
 activity_model = ActivityModel(
     type=ActivityTypeEnum.ORDER_MATCH,

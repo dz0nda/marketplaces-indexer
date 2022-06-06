@@ -1,8 +1,8 @@
 import pytest
 
-from rarible_marketplace_indexer.models import ActivityTypeEnum
-from rarible_marketplace_indexer.models import OrderStatusEnum
-from rarible_marketplace_indexer.models import PlatformEnum
+from marketplaces_indexer.models import ActivityTypeEnum
+from marketplaces_indexer.models import OrderStatusEnum
+from marketplaces_indexer.models import PlatformEnum
 
 
 class TestStrEnum:

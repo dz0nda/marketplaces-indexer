@@ -2,8 +2,8 @@ import pytest
 from _pytest.fixtures import SubRequest
 from pydantic import parse_obj_as
 
-from rarible_marketplace_indexer.models import OrderModel
-from rarible_marketplace_indexer.types.rarible_api_objects.asset.asset import Asset
+from marketplaces_indexer.models import OrderModel
+from marketplaces_indexer.types.rarible_api_objects.asset.asset import Asset
 
 
 class TestAsset:

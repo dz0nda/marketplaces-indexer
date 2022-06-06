@@ -5,7 +5,7 @@ from string import digits
 
 import pytest
 
-from rarible_marketplace_indexer.types.tezos_objects.asset_value.xtz_value import Xtz
+from marketplaces_indexer.types.tezos_objects.asset_value.xtz_value import Xtz
 
 
 class TestXtz:

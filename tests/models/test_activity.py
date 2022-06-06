@@ -3,8 +3,8 @@ from datetime import datetime
 from typing import Optional
 from uuid import UUID
 
-from rarible_marketplace_indexer.producer.serializer import kafka_value_serializer
-from rarible_marketplace_indexer.types.rarible_api_objects.activity.order.factory import RaribleApiOrderActivityFactory
+from marketplaces_indexer.producer.serializer import kafka_value_serializer
+from marketplaces_indexer.types.rarible_api_objects.activity.order.factory import RaribleApiOrderActivityFactory
 from tests.models.conftest import compare_kafka_messages
 
 

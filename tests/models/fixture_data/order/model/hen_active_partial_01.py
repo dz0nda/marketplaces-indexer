@@ -2,14 +2,14 @@ from datetime import datetime
 
 from pytz import UTC
 
-from rarible_marketplace_indexer.models import OrderModel
-from rarible_marketplace_indexer.models import OrderStatusEnum
-from rarible_marketplace_indexer.models import PlatformEnum
-from rarible_marketplace_indexer.types.rarible_api_objects.asset.enum import AssetClassEnum
-from rarible_marketplace_indexer.types.tezos_objects.asset_value.asset_value import AssetValue
-from rarible_marketplace_indexer.types.tezos_objects.asset_value.xtz_value import Xtz
-from rarible_marketplace_indexer.types.tezos_objects.tezos_object_hash import ImplicitAccountAddress
-from rarible_marketplace_indexer.types.tezos_objects.tezos_object_hash import OriginatedAccountAddress
+from marketplaces_indexer.models import OrderModel
+from marketplaces_indexer.models import OrderStatusEnum
+from marketplaces_indexer.models import PlatformEnum
+from marketplaces_indexer.types.rarible_api_objects.asset.enum import AssetClassEnum
+from marketplaces_indexer.types.tezos_objects.asset_value.asset_value import AssetValue
+from marketplaces_indexer.types.tezos_objects.asset_value.xtz_value import Xtz
+from marketplaces_indexer.types.tezos_objects.tezos_object_hash import ImplicitAccountAddress
+from marketplaces_indexer.types.tezos_objects.tezos_object_hash import OriginatedAccountAddress
 
 order_model = OrderModel(
     id=None,

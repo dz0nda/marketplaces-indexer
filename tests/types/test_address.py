@@ -1,7 +1,7 @@
 import pytest
 
-from rarible_marketplace_indexer.types.tezos_objects.tezos_object_hash import ImplicitAccountAddress
-from rarible_marketplace_indexer.types.tezos_objects.tezos_object_hash import OriginatedAccountAddress
+from marketplaces_indexer.types.tezos_objects.tezos_object_hash import ImplicitAccountAddress
+from marketplaces_indexer.types.tezos_objects.tezos_object_hash import OriginatedAccountAddress
 
 
 class EnvironmentAwareMixin:

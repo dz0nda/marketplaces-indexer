@@ -1,5 +1,5 @@
-from rarible_marketplace_indexer.producer.serializer import kafka_value_serializer
-from rarible_marketplace_indexer.types.rarible_api_objects.order.factory import RaribleApiOrderFactory
+from marketplaces_indexer.producer.serializer import kafka_value_serializer
+from marketplaces_indexer.types.rarible_api_objects.order.factory import RaribleApiOrderFactory
 from tests.models.conftest import compare_kafka_messages
 
 
