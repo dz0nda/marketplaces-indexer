@@ -1,5 +1,5 @@
 spec_version: 1.2
-package: rarible_marketplace_indexer
+package: marketplaces_indexer
 
 database:
   kind: postgres

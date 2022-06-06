@@ -1,5 +1,5 @@
 ARG PYTHON_VERSION=3.10
-ARG SOURCE_DIR=rarible_marketplace_indexer
+ARG SOURCE_DIR=marketplaces_indexer
 ARG POETRY_PATH=/opt/poetry
 ARG VENV_PATH=/opt/venv
 ARG APP_PATH=/opt/app
