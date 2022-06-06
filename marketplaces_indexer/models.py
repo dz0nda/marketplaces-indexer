@@ -8,11 +8,11 @@ from uuid import uuid5
 
 from dipdup.models import Transaction
 from tortoise import fields
-from tortoise.backends.base.client import BaseDBAsyncClient
+# from tortoise.backends.base.client import BaseDBAsyncClient
 from tortoise.models import Model
-from tortoise.signals import post_save
+# from tortoise.signals import post_save
 
-from marketplaces_indexer.producer.helper import producer_send
+# from marketplaces_indexer.producer.helper import producer_send
 from marketplaces_indexer.types.rarible_api_objects.asset.enum import AssetClassEnum
 from marketplaces_indexer.types.tezos_objects.asset_value.asset_value import AssetValueField
 from marketplaces_indexer.types.tezos_objects.asset_value.xtz_value import XtzField
@@ -44,6 +44,7 @@ class PlatformEnum(str, Enum):
     OBJKT: _StrEnumValue = 'Objkt'
     OBJKT_V2: _StrEnumValue = 'Objkt_v2'
     RARIBLE: _StrEnumValue = 'Rarible'
+    FXHASH: _StrEnumValue = 'Fxhash'
 
 
 class ActivityModel(Model):
@@ -152,27 +153,27 @@ class OrderModel(Model):
         return uuid5(namespace=uuid.NAMESPACE_OID, name=oid)
 
 
-@post_save(OrderModel)
-async def signal_order_post_save(
-    sender: OrderModel,
-    instance: OrderModel,
-    created: bool,
-    using_db: "Optional[BaseDBAsyncClient]",
-    update_fields: List[str],
-) -> None:
-    from marketplaces_indexer.types.rarible_api_objects.order.factory import RaribleApiOrderFactory
+# @post_save(OrderModel)
+# async def signal_order_post_save(
+#     sender: OrderModel,
+#     instance: OrderModel,
+#     created: bool,
+#     using_db: "Optional[BaseDBAsyncClient]",
+#     update_fields: List[str],
+# ) -> None:
+#     from marketplaces_indexer.types.rarible_api_objects.order.factory import RaribleApiOrderFactory
 
-    await producer_send(RaribleApiOrderFactory.build(instance))
+#     await producer_send(RaribleApiOrderFactory.build(instance))
 
 
-@post_save(ActivityModel)
-async def signal_activity_post_save(
-    sender: ActivityModel,
-    instance: ActivityModel,
-    created: bool,
-    using_db: "Optional[BaseDBAsyncClient]",
-    update_fields: List[str],
-) -> None:
-    from marketplaces_indexer.types.rarible_api_objects.activity.order.factory import RaribleApiOrderActivityFactory
+# @post_save(ActivityModel)
+# async def signal_activity_post_save(
+#     sender: ActivityModel,
+#     instance: ActivityModel,
+#     created: bool,
+#     using_db: "Optional[BaseDBAsyncClient]",
+#     update_fields: List[str],
+# ) -> None:
+#     from marketplaces_indexer.types.rarible_api_objects.activity.order.factory import RaribleApiOrderActivityFactory
 
-    await producer_send(RaribleApiOrderActivityFactory.build(instance))
+#     await producer_send(RaribleApiOrderActivityFactory.build(instance))

@@ -16,6 +16,10 @@ contracts:
     address: KT1WvzYHCNBvDSdwafTHv7nJ1dWmZ8GCYuuC
     typename: objkt_marketplace_v2
 
+  fxhash_mainnet:
+    address: KT1Xo5B7PNBAeynZPmca4bRh6LQow4og1Zb9
+    typename: fxhash_marketplace
+
 indexes:
   hen_actions:
     kind: operation
@@ -79,6 +83,27 @@ indexes:
         pattern:
           - destination: objkt_v2_mainnet
             entrypoint: fulfill_ask
+
+  fxhash_actions:
+    kind: operation
+    datasource: tzkt_mainnet
+    contracts:
+      - fxhash_mainnet
+    handlers:
+      - callback: fxhash_order_list
+        pattern:
+          - destination: fxhash_mainnet
+            entrypoint: offer
+
+      - callback: fxhash_order_cancel_list
+        pattern:
+          - destination: fxhash_mainnet
+            entrypoint: cancel_offer
+
+      - callback: fxhash_order_match
+        pattern:
+          - destination: fxhash_mainnet
+            entrypoint: collect
 
   token_transfers:
     kind: token_transfer
