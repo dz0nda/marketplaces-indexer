@@ -39,8 +39,8 @@ class FxhashOrderListEvent(AbstractOrderListEvent):
             make_price=make_price,
             make=MakeDto(
                 asset_class=AssetClassEnum.MULTI_TOKEN,
-                contract=OriginatedAccountAddress(transaction.parameter.token.address),
-                token_id=int(transaction.parameter.Fxhash_id),
+                contract=OriginatedAccountAddress("KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE"),
+                token_id=int(transaction.parameter.objkt_id),
                 value=make_value,
             ),
             take=TakeDto(
